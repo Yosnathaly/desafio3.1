@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>::: Desafio 3.1 :::</title>
+</head>
+<body>
+    <div class="contenedor__general">
+        <aside>
+            <div class="contenedor__aside">
+                <div class="cabecera__aside">
+                    <img src="./assets/imgs/Dell-Sept-14.jpg" alt="laptop">
+                    <h1>Laptop Gamer</h1>
+                </div>
+                <div class="contenido__aside">
+                    <input id="text1" placeholder="Cantidad" min="0" type="number">
+                    <input id="text2" placeholder="Color" type="color">
+                    <h1>Precio: $2.550.000</h1>
+                    <button onclick="
+                    const precio = 2550000;
+                    const cantidadentrada = document.querySelector('#text1').value;
+                    const colorentrada = document.querySelector('#text2').value;
+                    const preciofinal = document.querySelector('#total');
+                    const cantidadfinal = document.querySelector('#cantidad');
+                    const colorfinal = document.querySelector('#circulo');
+                    const preciofinalcalculado = precio*cantidadentrada;
+                    preciofinal.innerHTML = preciofinalcalculado.toLocaleString();
+                    cantidadfinal.innerHTML = cantidadentrada;
+                    colorfinal.style.backgroundColor = colorentrada;
+                    ">
+                        Calcular Total
+                    </button>
+                </div>
+            </div>
+        </aside>
+        <main>
+            <div class="contenedor__main">
+                <h1>
+                    Total: $<span id="total">__</span>
+                </h1>
+                <h1>
+                    Cantidad:<span id="cantidad" >__</span>
+                </h1>
+                <h1 id="color">Color:
+                    <div id="circulo"></div>
+                </h1>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
